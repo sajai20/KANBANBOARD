@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.kanban {
+    display: flex;
+    padding: 30px;
+    width: 750px;
+    background-color: #009578;
+    border-radius: 5px;
+}
+
+/* font family applied to every element inside kanban*/
+.kanban * {
+    font-family: sans-serif;
+}
+
+.kanban_column {
+    flex: 1;
+}
+
+/*not child except the last child will have margin righth of 30px*/
+.kanban_column:not(:last-child) {
+    margin-right: 30px;
+}
+
+.kanban_column_title {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: white;
+    user-select: none;
+}
+
+.kanban_item_input {
+    padding: 10px 15px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.kanban_dropzone {
+    height: 10px;
+    transition: background 1s, height 1s;
+}
+
+.kanban_dropzone_active {
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.kanban_add_item {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
